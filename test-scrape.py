@@ -29,16 +29,3 @@ print ("Hello " + fname + " " + lname + "! How are you doing on this " + weather
 print ("Did you know your first name starts with the letter " + fname[0] + " and there are " + str(fname_length) + " characters!")
 print ("The number of characters " + str(name_char))
 
-# Get the response from the API endpoint.
-response = requests.get("http://api.open-notify.org/astros.json")
-data = response.json()
-# 9 people are currently in space.
-print(data["number"])
-print(data)
-
-response = requests.get("https://api.met.no/weatherapi/forestfireindex/1.1/.json")
-data1 = response.json()
-print(data1)
-print(data1("name"))
-test
-fvgdfg
