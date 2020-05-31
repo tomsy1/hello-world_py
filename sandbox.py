@@ -40,3 +40,4 @@ response = requests.get("https://api.met.no/weatherapi/forestfireindex/1.1/.json
 data1 = response.json()
 print(data1)
 print(data1("name"))
+test
