@@ -5,18 +5,19 @@ dt = datetime.datetime.today()
 
 
 swing_count = {
-    1:60,
+    1:120,
 
 
 }
 days_in_month = 30
 goal = 10000
-goal_average_daily_swings = goal / days_in_month
+goal_formatted = format(10000, ",d")
+goal_average_daily_swings = round(goal / days_in_month)
 total_swings = sum(swing_count.values())
 current_day = dt.day
-run_rate = (total_swings / current_day)*days_in_month
+run_rate = round((total_swings / current_day)*days_in_month)
 days_remaining = days_in_month - current_day
-print("Goal number of swings: " + str(goal))
+print("Goal number of swings: " + str(goal_formatted))
 print("Average daily swings needed to reach goal: " + str(goal_average_daily_swings))
 print("Total swings so far this month: " + str(total_swings))
 print("Current run rate: " + str(run_rate))
