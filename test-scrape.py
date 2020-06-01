@@ -12,8 +12,17 @@ locations = {
 "MOSCOW":524901,
 }
 location_id = locations.get(where_are_you,"nah")
+
+while location_id == ("nah"):
+    try_again = input("The destination " + where_are_you.capitalize() + " has not been recognised would you like to try again? ")
+    if try_again == ("y"):
+        where_are_you = input("Where are you today? ").upper()
+    else:
+        break
+    location_id = locations.get(where_are_you, "nah")
+
+
 if location_id == "nah":
-    print("The destination " + where_are_you.capitalize() + " is not recognised!")
     story_live = False
 else:
     page = requests.get("https://www.bbc.co.uk/weather/" + str(location_id))
