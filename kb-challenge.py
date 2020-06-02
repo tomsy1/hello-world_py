@@ -19,8 +19,8 @@ current_day = dt.day
 run_rate = round((total_swings / current_day)*days_in_month)
 days_remaining = days_in_month - current_day
 run_rate_goal = (((run_rate-goal)/goal)*100)+100
-
-
+av_swings_day = (total_swings / current_day)
+print (av_swings_day)
 
 
 
@@ -33,6 +33,7 @@ print("=================================================")
 print("Goal number of swings: " + str(goal_formatted))
 print("Average daily swings needed to reach goal: " + str(goal_average_daily_swings))
 print("Total swings so far this month: " + str(total_swings))
+print("Average swings a day: " + str(av_swings_day))
 print("Current run rate: " + str(run_rate))
 print ("The current run rate is " + str(run_rate_goal) + "% of goal")
 print("Days remaining: " + str(days_remaining))
