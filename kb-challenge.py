@@ -6,7 +6,7 @@ dt = datetime.datetime.today()
 
 swing_count = {
     1:350,
-    2: 250,
+    2: 370,
 
 
 }
@@ -19,11 +19,22 @@ current_day = dt.day
 run_rate = round((total_swings / current_day)*days_in_month)
 days_remaining = days_in_month - current_day
 run_rate_goal = (((run_rate-goal)/goal)*100)+100
-print (run_rate_goal)
+
+
+
+
+
+print("=================================================")
+if run_rate_goal < 95.0:
+    print (str.upper("Work harder you cunt the Campbell can do better!"))
+else:
+    print (str.upper("Great work, you are on track!"))
+print("=================================================")
 print("Goal number of swings: " + str(goal_formatted))
 print("Average daily swings needed to reach goal: " + str(goal_average_daily_swings))
 print("Total swings so far this month: " + str(total_swings))
 print("Current run rate: " + str(run_rate))
+print ("The current run rate is " + str(run_rate_goal) + "% of goal")
 print("Days remaining: " + str(days_remaining))
 
 
